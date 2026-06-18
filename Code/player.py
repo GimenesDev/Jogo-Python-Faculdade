@@ -26,7 +26,7 @@ class Player(Entity):
         pass
 
 
-    def shoot(self):
+    def shoot(self) -> PlayerShot:
         self.shot_delay -= 1
         if self.shot_delay == 0:
             self.shot_delay = ENTITY_SHOT_DELAY[self.name]
